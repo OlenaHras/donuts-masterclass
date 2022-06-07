@@ -2,7 +2,7 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://OlenaHras.github.io/donuts-masterclass",
+  "homepage": "https://olenahras.github.io/donuts-masterclass",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /donuts-masterclass/"
