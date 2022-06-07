@@ -1,0 +1,42 @@
+:root {
+  --text-color: #2e2520;
+  --btn-text-color: #FFFFFF;
+  --background-color: #fef3e4;
+  --acent-color: #ab816c;
+  --hover-color: #876655;
+  --actived-color: #674D40;
+  --bg-color-form: #FFFFF9;
+  --primary-font: 'Montserrat';
+  --secondary-font: 'Caveat Brush';
+  --btn-box-shadow: 0 10px 12px 0 rgba(122, 121, 121, 0.201), 0 17px 50px 0 rgba(140, 135, 135, 0.19);
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  margin: 0;
+  font-family: var(--primary-font), sans-serif;
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 1.2;
+  background-color: var(--bg-color-form);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  
+
+  @media screen and (min-width:320px) {
+    max-width: 320px;
+  }
+
+  @media screen and (min-width:768px) {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  @media screen and (min-width:1280px) {
+    max-width: 1280px;
+    padding: 0 16px;
+  }
+}

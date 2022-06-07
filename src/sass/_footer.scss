@@ -1,0 +1,104 @@
+footer {
+    position: relative;
+    overflow: hidden;
+}
+.social-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
+    margin-bottom: 32px;
+    @media screen and (min-width:1280px) {
+        margin-bottom: 80px;
+    }
+}
+.social-btns__button {
+    &:not(:last-child) {
+    margin-right: 16px;
+    }
+    fill: var(--text-color);
+}
+.footer-contacts {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.25;
+}
+.footer-contacts__list {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width:768px) {
+        justify-content: start;
+    }
+        margin-bottom: 20px;
+}
+.footer-contacts__item {
+    fill: var(--text-color);
+    
+}
+@media screen and (min-width:768px) {
+    .footer-contacts__item {
+        &:nth-child(1){
+            margin-right: 426px;
+        }
+    }
+}
+@media screen and (min-width:1280px) {
+    .footer-contacts__item {
+        &:nth-child(1) {
+            margin-right: 620px;
+            margin-left: 128px;
+        }
+    }
+}
+.social-btns__link {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            background-color: var(--hover-color);
+            fill: var(--btn-text-color);
+        }
+}
+.footer-bg {
+    background-image: url('../images/footer/plate-spoon.png');
+    background-size: 113px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    @media screen and (min-width:768px) {
+        background-size: 207px;
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                background-image: url('../images/footer/plate-spoon@2x.png');
+            }
+    }
+    @media screen and (min-width:1280px) {
+        background-size: 332px;
+        background-position: 100% 5%;
+    }
+}
+.footer-contacts__link {
+    position: relative;
+    &::after {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--hover-color);
+            content: '';
+            transition: width 0.3s ease-out;
+        }
+}
+.footer-contacts__link:hover::after,
+.footer-contacts__link:focus:after {
+    width: 100%;
+}

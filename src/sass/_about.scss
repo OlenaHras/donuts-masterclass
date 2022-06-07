@@ -1,0 +1,134 @@
+.about {
+    background-image: url(../images/about/coffee-donut.png);
+    background-repeat: no-repeat;
+    background-size: 279px;
+    background-position: 50% 0;
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/about/coffee-donut@2x.png);
+    }
+
+    @media (min-width: 768px) {
+        max-width: 768px;
+        margin-right: auto;
+        margin-left: auto;
+        background-size: 336px;
+        background-position: 0 0;
+    }
+
+    @media (min-width: 1280px) {
+        max-width: 1280px;
+        width: 1033px;
+        position: relative;
+        margin-bottom: 22px;
+        height: 535px;
+        background-size: 501px;
+    }
+
+    &__box {
+        @media (min-width: 768px) {
+            margin-left: auto;
+
+            width: 336px;
+        }
+
+        @media (min-width: 1280px) {
+            width: 392px;
+            position: absolute;
+            top: 43px;
+            right: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 8px;
+
+        font-family: 'Caveat Brush';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.25;
+
+        @media (max-width: 767px) {
+            padding-top: 303px;
+
+            text-align: center;
+        }
+
+        @media (min-width: 1280px) {
+        font-size: 36px;
+        line-height: 1.80;
+        }
+    }
+
+    &__text {
+        margin-bottom: 16px;
+
+        font-size: 16px;
+        line-height: 1.25;
+
+        
+
+        @media (min-width: 1280px) {
+            font-size: 18px;
+            line-height: 1.22;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+
+        @media (min-width: 1280px) {
+            display: block;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        margin-bottom: 16px;
+
+        font-family: 'Caveat Brush';
+        font-size: 18px;
+        line-height: 1.27;
+        color: var(--acent-color);
+        cursor: pointer;
+
+        &:hover, &:focus {
+            color: var(--hover-color)
+        }
+
+        @media (min-width: 768px) {
+            margin-bottom: 88px;
+        }
+
+        @media (min-width: 1280px) {
+            display: none;
+        }
+    }
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .about__content {
+    display: block;
+}
+
+#check:checked ~ .about__label {
+    visibility: hidden;
+    position: relative;
+}
+
+#check:checked ~ .about__label:after {
+    content: 'Less';
+    display: block;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+}
